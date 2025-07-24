@@ -101,7 +101,7 @@ async function startApp() {
     await connectDb();
     
     // Start the scheduler
-    schedulerService.start();
+    //schedulerService.start();
     logger.info('Summary generation scheduler initialized');
     
     // Start the server

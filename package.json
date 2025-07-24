@@ -19,6 +19,7 @@
     "format": "prettier --write \"src/**/*.{js,ts}\""
   },
   "dependencies": {
+    "@gradio/client": "^1.15.6",
     "@types/node-cron": "^3.0.11",
     "axios": "^1.10.0",
     "chalk": "^5.4.1",

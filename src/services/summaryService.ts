@@ -1,4 +1,5 @@
 import axios from '../utils/axiosIntercepter.js';
+import { Client } from "@gradio/client";
 import NewsArticle from '../models/newsArticles.js';
 import UserCategoryPreference from '../models/userCategoryPreference.js';
 import { logger } from '../utils/logger.js';
@@ -167,25 +168,27 @@ export class SummaryService {
     }
 
     /**
-     * Send summary to external service (fire-and-forget)
+     * Send summary to external service using Hugging Face Gradio client
      */
-    private sendSummaryToService(summary: ArticleSummary): void {
-        // Fire-and-forget request - don't wait for response
-        axios.post('/summarize', {
-            userId: summary.userId,
-            summary: summary.summary,
-            articleCount: summary.articleCount,
-            generatedAt: summary.generatedAt,
-            batchId: summary.batchId,
-            metadata: {
-                service: 'summaryService',
-                version: '1.0.0'
-            }
-        }).then(() => {
-            logger.info(`Summary request sent for user ${summary.userId} in batch ${summary.batchId}`);
-        }).catch((error) => {
-            logger.error(`Error sending summary for user ${summary.userId} in batch ${summary.batchId}:`, error.message);
-        });
+    public async sendSummaryToService(summary: ArticleSummary): Promise<string> {
+        try {
+            // Connect to the Gradio client
+            const client = await Client.connect("joeljose555/aiScripts", {
+                hf_token: process.env.HF_TOKEN as `hf_${string}`
+            });
+            
+            // Call the summarise_interface with the summary text
+            const result = await client.predict("/run_summarization_gpu", {
+                text: summary.summary,
+                max_length: 700, // Adjust this value based on your needs
+            });
+
+            logger.info(`Summary processed for user ${summary.userId} in batch ${summary.batchId}. Result: ${result.data}`);
+            return result.data as string;
+        } catch (error) {
+            logger.error(`Error processing summary for user ${summary.userId} in batch ${summary.batchId}:`, error);
+            throw error;
+        }
     }
 
     /**
@@ -198,9 +201,9 @@ export class SummaryService {
             for (let i = 0; i < summaries.length; i++) {
                 const summary = summaries[i];
                 console.log(summary);
-                // Send the summary (fire-and-forget)
+                // Send the summary and wait for it to complete
                 fs.writeFileSync('summary.json', JSON.stringify(summary, null, 2));
-                this.sendSummaryToService(summary);
+                await this.sendSummaryToService(summary);
                 
                 // Wait 2 seconds before sending the next one (except for the last one)
                 if (i < summaries.length - 1) {

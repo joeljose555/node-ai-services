@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { summaryService } from '../services/summaryService.js';
 import { schedulerService } from '../schedulers/scheduler.js';
 import { logger } from '../utils/logger.js';
+import fs from 'fs';
 
 export class SummarizerController {
     
@@ -146,7 +147,7 @@ export class SummarizerController {
             }
             
             const summary = await summaryService.generateSummaryForUser(userId);
-            
+            fs.writeFileSync('summary.json', JSON.stringify(summary, null, 2));
             if (!summary) {
                 res.status(404).json({
                     success: false,
@@ -154,12 +155,11 @@ export class SummarizerController {
                 });
                 return;
             }
-            
-            await summaryService.sendSummariesToService([summary]);
+            let data = await summaryService.sendSummaryToService(summary);
             
             res.status(200).json({
                 success: true,
-                data: summary,
+                data: data,
                 sentToExternalService: true
             });
             

@@ -1171,3 +1171,856 @@
 {"level":"info","message":"Batch statistics:","timestamp":"2025-07-17T15:00:00.376Z"}
 {"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-17T15:00:00.377Z"}
 {"level":"info","message":"=== Completed batch maintenance task in 358ms ===","timestamp":"2025-07-17T15:00:00.377Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:24:10.275Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:24:10.335Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:24:10.335Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:24:10.338Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:24:10.958Z"}
+{"level":"info","message":"Summary generation and batch maintenance schedulers started","timestamp":"2025-07-19T20:24:10.959Z"}
+{"level":"info","message":"Running summary generation immediately on startup","timestamp":"2025-07-19T20:24:10.959Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:24:10.959Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:24:10.964Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:24:10.964Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:24:10.965Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:24:10.965Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:24:10.965Z"}
+{"level":"info","message":"=== Starting scheduled summary generation ===","timestamp":"2025-07-19T20:24:15.967Z"}
+{"level":"info","message":"Starting scheduled summary generation task","timestamp":"2025-07-19T20:24:15.968Z"}
+{"level":"warn","message":"No category preferences found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:24:16.350Z"}
+{"level":"info","message":"No articles found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:24:16.351Z"}
+{"level":"info","message":"Generated 1 summaries for users","timestamp":"2025-07-19T20:24:16.352Z"}
+{"level":"info","message":"Created batch tracker for batch: batch_1752956655969_687bfeef2b8d45766660cd58 with 1 expected summaries","timestamp":"2025-07-19T20:24:16.422Z"}
+{"level":"info","message":"Starting to send 1 summaries sequentially with 2-second delays","timestamp":"2025-07-19T20:24:16.422Z"}
+{"level":"info","message":"Summary processed for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch batch_1752956655969_687bfeef2b8d45766660cd58. Result: Input: A derelict tenement building in Glasgow collapsed, causing nearby homes to be evacuated. The building at the corner of Kenmure Street and Albert Drive in Pollockshields had been lying derelict for about five years after being gutted by a fire during lockdown. The Scottish Fire and Rescue Service sent eight appliances to the scene, but there were no reports of injuries. The Twelfth of July is the biggest day in the Orange Order's marching calendar, with thousands of Orange Order members participating in annual marches to commemorate the anniversary of the Battle of the Boyne in 1690.","timestamp":"2025-07-19T20:24:54.094Z"}
+{"level":"info","message":"All 1 summary requests have been sent","timestamp":"2025-07-19T20:24:54.094Z"}
+{"level":"info","message":"Completed scheduled summary generation task. Processed 1 summaries for batch: batch_1752956655969_687bfeef2b8d45766660cd58","timestamp":"2025-07-19T20:24:54.094Z"}
+{"level":"info","message":"=== Completed scheduled summary generation in 38128ms ===","timestamp":"2025-07-19T20:24:54.095Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T20:25:00.022Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T20:25:00.024Z"}
+{"level":"info","message":"Found 4 timed-out batches to process","timestamp":"2025-07-19T20:25:00.060Z"}
+{"level":"warn","message":"Batch batch_1752762986403_68790a6a23ab832555e86da2 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T20:25:00.132Z"}
+{"level":"error","message":"Batch batch_1752762986403_68790a6a23ab832555e86da2 failed - no summaries found within timeout period","timestamp":"2025-07-19T20:25:00.168Z"}
+{"level":"warn","message":"Batch batch_1752763987693_68790e5374bc932fa85a9a75 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T20:25:00.228Z"}
+{"level":"error","message":"Batch batch_1752763987693_68790e5374bc932fa85a9a75 failed - no summaries found within timeout period","timestamp":"2025-07-19T20:25:00.264Z"}
+{"level":"warn","message":"Batch batch_1752764290236_68790f82ff3d49fe9cfe4a9f timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T20:25:00.324Z"}
+{"level":"error","message":"Batch batch_1752764290236_68790f82ff3d49fe9cfe4a9f failed - no summaries found within timeout period","timestamp":"2025-07-19T20:25:00.360Z"}
+{"level":"warn","message":"Batch batch_1752764323846_68790fa3a1338a628f0c1dd9 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T20:25:00.420Z"}
+{"level":"error","message":"Batch batch_1752764323846_68790fa3a1338a628f0c1dd9 failed - no summaries found within timeout period","timestamp":"2025-07-19T20:25:00.456Z"}
+{"level":"info","message":"Checking 10 failed batches for orphaned summaries","timestamp":"2025-07-19T20:25:00.489Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T20:25:00.813Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T20:25:00.847Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T20:25:00.848Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 827ms ===","timestamp":"2025-07-19T20:25:00.849Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:27:02.321Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:27:02.337Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:27:02.337Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:27:02.340Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:27:03.011Z"}
+{"level":"info","message":"Summary generation and batch maintenance schedulers started","timestamp":"2025-07-19T20:27:03.014Z"}
+{"level":"info","message":"Running summary generation immediately on startup","timestamp":"2025-07-19T20:27:03.015Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:27:03.017Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:27:03.026Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:27:03.027Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:27:03.029Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:27:03.029Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:27:03.031Z"}
+{"level":"info","message":"=== Starting scheduled summary generation ===","timestamp":"2025-07-19T20:27:08.029Z"}
+{"level":"info","message":"Starting scheduled summary generation task","timestamp":"2025-07-19T20:27:08.031Z"}
+{"level":"warn","message":"No category preferences found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:08.353Z"}
+{"level":"info","message":"No articles found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:08.353Z"}
+{"level":"info","message":"Generated 1 summaries for users","timestamp":"2025-07-19T20:27:08.353Z"}
+{"level":"info","message":"Created batch tracker for batch: batch_1752956828032_687bff9c864e3a9bd891b874 with 1 expected summaries","timestamp":"2025-07-19T20:27:08.422Z"}
+{"level":"info","message":"Starting to send 1 summaries sequentially with 2-second delays","timestamp":"2025-07-19T20:27:08.423Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:27:09.855Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:27:09.873Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:27:09.874Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:27:09.877Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:27:10.377Z"}
+{"level":"info","message":"Summary generation and batch maintenance schedulers started","timestamp":"2025-07-19T20:27:10.379Z"}
+{"level":"info","message":"Running summary generation immediately on startup","timestamp":"2025-07-19T20:27:10.381Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:27:10.381Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:27:10.390Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:27:10.391Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:27:10.392Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:27:10.393Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:27:10.394Z"}
+{"level":"info","message":"=== Starting scheduled summary generation ===","timestamp":"2025-07-19T20:27:15.391Z"}
+{"level":"info","message":"Starting scheduled summary generation task","timestamp":"2025-07-19T20:27:15.392Z"}
+{"level":"warn","message":"No category preferences found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:15.657Z"}
+{"level":"info","message":"No articles found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:15.658Z"}
+{"level":"info","message":"Generated 1 summaries for users","timestamp":"2025-07-19T20:27:15.658Z"}
+{"level":"info","message":"Created batch tracker for batch: batch_1752956835392_687bffa39d75336d07f88a30 with 1 expected summaries","timestamp":"2025-07-19T20:27:15.692Z"}
+{"level":"info","message":"Starting to send 1 summaries sequentially with 2-second delays","timestamp":"2025-07-19T20:27:15.692Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:27:19.076Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:27:19.094Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:27:19.095Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:27:19.098Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:27:19.603Z"}
+{"level":"info","message":"Summary generation and batch maintenance schedulers started","timestamp":"2025-07-19T20:27:19.604Z"}
+{"level":"info","message":"Running summary generation immediately on startup","timestamp":"2025-07-19T20:27:19.605Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:27:19.606Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:27:19.613Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:27:19.613Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:27:19.614Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:27:19.615Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:27:19.615Z"}
+{"level":"info","message":"=== Starting scheduled summary generation ===","timestamp":"2025-07-19T20:27:24.620Z"}
+{"level":"info","message":"Starting scheduled summary generation task","timestamp":"2025-07-19T20:27:24.621Z"}
+{"level":"warn","message":"No category preferences found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:24.943Z"}
+{"level":"info","message":"No articles found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:24.944Z"}
+{"level":"info","message":"Generated 1 summaries for users","timestamp":"2025-07-19T20:27:24.945Z"}
+{"level":"info","message":"Created batch tracker for batch: batch_1752956844622_687bffacaaad5ab9783b6108 with 1 expected summaries","timestamp":"2025-07-19T20:27:24.999Z"}
+{"level":"info","message":"Starting to send 1 summaries sequentially with 2-second delays","timestamp":"2025-07-19T20:27:25.001Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:27:27.729Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:27:27.748Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:27:27.748Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:27:27.751Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:27:28.278Z"}
+{"level":"info","message":"Summary generation and batch maintenance schedulers started","timestamp":"2025-07-19T20:27:28.279Z"}
+{"level":"info","message":"Running summary generation immediately on startup","timestamp":"2025-07-19T20:27:28.280Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:27:28.280Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:27:28.285Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:27:28.286Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:27:28.287Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:27:28.287Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:27:28.288Z"}
+{"level":"info","message":"=== Starting scheduled summary generation ===","timestamp":"2025-07-19T20:27:33.285Z"}
+{"level":"info","message":"Starting scheduled summary generation task","timestamp":"2025-07-19T20:27:33.285Z"}
+{"level":"warn","message":"No category preferences found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:33.574Z"}
+{"level":"info","message":"No articles found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:27:33.575Z"}
+{"level":"info","message":"Generated 1 summaries for users","timestamp":"2025-07-19T20:27:33.575Z"}
+{"level":"info","message":"Created batch tracker for batch: batch_1752956853285_687bffb5c232e20719f5cfb1 with 1 expected summaries","timestamp":"2025-07-19T20:27:33.610Z"}
+{"level":"info","message":"Starting to send 1 summaries sequentially with 2-second delays","timestamp":"2025-07-19T20:27:33.611Z"}
+{"level":"info","message":"Summary processed for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch batch_1752956853285_687bffb5c232e20719f5cfb1. Result: Input: Israeli forces killed at least 30 people in Gaza, including 10 waiting for aid, on Friday. The UN reported nearly 800 people killed trying to access food in Gaza since late May, with most deaths occurring near facilities operated by the US- and Israel-backed Gaza Humanitarian Foundation (GHF). The GHF called the UN report \"false and misleading,\" claiming that \"most deadly attacks on aid sites have been linked to UN convoys.\" Talks aimed at securing a ceasefire in Gaza are stalling over the extent of Israeli forces' withdrawal from the Palestinian territory.","timestamp":"2025-07-19T20:28:01.753Z"}
+{"level":"info","message":"All 1 summary requests have been sent","timestamp":"2025-07-19T20:28:01.755Z"}
+{"level":"info","message":"Completed scheduled summary generation task. Processed 1 summaries for batch: batch_1752956853285_687bffb5c232e20719f5cfb1","timestamp":"2025-07-19T20:28:01.756Z"}
+{"level":"info","message":"=== Completed scheduled summary generation in 28472ms ===","timestamp":"2025-07-19T20:28:01.757Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:29:26.420Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:29:26.439Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:29:26.439Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:29:26.442Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:29:27.032Z"}
+{"level":"info","message":"Summary generation and batch maintenance schedulers started","timestamp":"2025-07-19T20:29:27.033Z"}
+{"level":"info","message":"Running summary generation immediately on startup","timestamp":"2025-07-19T20:29:27.034Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:29:27.034Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:29:27.037Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:29:27.037Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:29:27.038Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:29:27.038Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:29:27.039Z"}
+{"level":"info","message":"=== Starting scheduled summary generation ===","timestamp":"2025-07-19T20:29:32.038Z"}
+{"level":"info","message":"Starting scheduled summary generation task","timestamp":"2025-07-19T20:29:32.039Z"}
+{"level":"warn","message":"No category preferences found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:29:32.357Z"}
+{"level":"info","message":"No articles found for user: 687530c3b1e9c035465f49a1","timestamp":"2025-07-19T20:29:32.358Z"}
+{"level":"info","message":"Generated 1 summaries for users","timestamp":"2025-07-19T20:29:32.358Z"}
+{"level":"info","message":"Created batch tracker for batch: batch_1752956972039_687c002c3df5e9e00660c39e with 1 expected summaries","timestamp":"2025-07-19T20:29:32.485Z"}
+{"level":"info","message":"Starting to send 1 summaries sequentially with 2-second delays","timestamp":"2025-07-19T20:29:32.486Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:30:27.152Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:30:27.169Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:30:27.169Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:30:27.173Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:30:27.786Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:30:27.787Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:30:27.790Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:30:27.790Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:30:27.791Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:30:27.791Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:30:27.792Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T20:35:00.033Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T20:35:00.034Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T20:35:00.073Z"}
+{"level":"info","message":"Checking 10 failed batches for orphaned summaries","timestamp":"2025-07-19T20:35:00.112Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T20:35:00.442Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T20:35:00.474Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T20:35:00.475Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 443ms ===","timestamp":"2025-07-19T20:35:00.476Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:36:36.282Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:36:36.302Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:36:36.303Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:36:36.307Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:36:36.889Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:36:36.890Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:36:36.893Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:36:36.893Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:36:36.893Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:36:36.893Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:36:36.894Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:37:45.581Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:37:45.597Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:37:45.597Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:37:45.601Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:37:46.201Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:37:46.203Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:37:46.211Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:37:46.212Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:37:46.213Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:37:46.214Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:37:46.216Z"}
+{"endpoint":"/summarise_interface","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined:","queue":true,"stage":"error","success":false,"time":"2025-07-19T20:38:06.427Z","timestamp":"2025-07-19T20:38:06.427Z","type":"status"}
+{"endpoint":"/summarise_interface","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6:","queue":true,"stage":"error","success":false,"time":"2025-07-19T20:38:06.427Z","timestamp":"2025-07-19T20:38:06.427Z","type":"status"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:38:42.949Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:38:42.964Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:38:42.964Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:38:42.967Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:38:44.535Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:38:44.536Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:38:44.543Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:38:44.543Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:38:44.544Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:38:44.545Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:38:44.546Z"}
+{"endpoint":"/summarise_interface","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined:","queue":true,"stage":"error","success":false,"time":"2025-07-19T20:38:52.460Z","timestamp":"2025-07-19T20:38:52.460Z","type":"status"}
+{"endpoint":"/summarise_interface","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6:","queue":true,"stage":"error","success":false,"time":"2025-07-19T20:38:52.460Z","timestamp":"2025-07-19T20:38:52.461Z","type":"status"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T20:40:00.026Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T20:40:00.027Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T20:40:00.059Z"}
+{"level":"info","message":"Checking 10 failed batches for orphaned summaries","timestamp":"2025-07-19T20:40:00.094Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T20:40:00.426Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T20:40:00.456Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T20:40:00.457Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 432ms ===","timestamp":"2025-07-19T20:40:00.458Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:40:55.822Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:40:55.847Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:40:55.848Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:40:55.851Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:40:56.412Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:40:56.412Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:40:56.415Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:40:56.416Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:40:56.416Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:40:56.417Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:40:56.417Z"}
+{"level":"info","message":"Summary processed for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined. Result: Input: A derelict tenement building in Glasgow collapsed, causing nearby homes to be evacuated. The building at the corner of Kenmure Street and Albert Drive in Pollockshields had been lying derelict for about five years after being gutted by a fire during lockdown. The Scottish Fire and Rescue Service sent eight appliances to the scene, but there were no reports of injuries. The Twelfth of July is the biggest day in the Orange Order's marching calendar, with thousands of Orange Order members participating in annual marches to commemorate the anniversary of the Battle of the Boyne in 1690.","timestamp":"2025-07-19T20:41:32.879Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-19T20:43:26.296Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-19T20:43:26.313Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-19T20:43:26.314Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-19T20:43:26.317Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-19T20:43:26.908Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-19T20:43:26.910Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-19T20:43:26.917Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-19T20:43:26.917Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-19T20:43:26.918Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-19T20:43:26.919Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T00:30:00.000Z"},"timestamp":"2025-07-19T20:43:26.920Z"}
+{"endpoint":"/summarise_interface","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined:","queue":true,"stage":"error","success":false,"time":"2025-07-19T20:43:37.355Z","timestamp":"2025-07-19T20:43:37.355Z","type":"status"}
+{"endpoint":"/summarise_interface","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6:","queue":true,"stage":"error","success":false,"time":"2025-07-19T20:43:37.355Z","timestamp":"2025-07-19T20:43:37.356Z","type":"status"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T20:45:00.022Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T20:45:00.023Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T20:45:22.147Z"}
+{"level":"info","message":"Checking 10 failed batches for orphaned summaries","timestamp":"2025-07-19T20:45:22.187Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T20:45:22.533Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T20:45:22.566Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T20:45:22.567Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 22545ms ===","timestamp":"2025-07-19T20:45:22.567Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T20:50:00.031Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T20:50:00.031Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T20:50:00.061Z"}
+{"level":"info","message":"Checking 10 failed batches for orphaned summaries","timestamp":"2025-07-19T20:50:00.095Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T20:50:00.429Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T20:50:00.461Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T20:50:00.462Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 431ms ===","timestamp":"2025-07-19T20:50:00.462Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T20:55:00.045Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T20:55:00.046Z"}
+{"level":"info","message":"Found 1 timed-out batches to process","timestamp":"2025-07-19T20:55:19.655Z"}
+{"level":"warn","message":"Batch batch_1752956655969_687bfeef2b8d45766660cd58 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T20:55:19.714Z"}
+{"level":"error","message":"Batch batch_1752956655969_687bfeef2b8d45766660cd58 failed - no summaries found within timeout period","timestamp":"2025-07-19T20:55:19.763Z"}
+{"level":"info","message":"Checking 11 failed batches for orphaned summaries","timestamp":"2025-07-19T20:55:19.793Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T20:55:20.151Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T20:55:20.181Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T20:55:20.181Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 20136ms ===","timestamp":"2025-07-19T20:55:20.181Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T21:00:00.020Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T21:00:00.021Z"}
+{"level":"info","message":"Found 5 timed-out batches to process","timestamp":"2025-07-19T21:00:00.312Z"}
+{"level":"warn","message":"Batch batch_1752956828032_687bff9c864e3a9bd891b874 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T21:00:00.374Z"}
+{"level":"error","message":"Batch batch_1752956828032_687bff9c864e3a9bd891b874 failed - no summaries found within timeout period","timestamp":"2025-07-19T21:00:00.414Z"}
+{"level":"warn","message":"Batch batch_1752956835392_687bffa39d75336d07f88a30 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T21:00:00.473Z"}
+{"level":"error","message":"Batch batch_1752956835392_687bffa39d75336d07f88a30 failed - no summaries found within timeout period","timestamp":"2025-07-19T21:00:00.506Z"}
+{"level":"warn","message":"Batch batch_1752956844622_687bffacaaad5ab9783b6108 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T21:00:00.567Z"}
+{"level":"error","message":"Batch batch_1752956844622_687bffacaaad5ab9783b6108 failed - no summaries found within timeout period","timestamp":"2025-07-19T21:00:00.598Z"}
+{"level":"warn","message":"Batch batch_1752956853285_687bffb5c232e20719f5cfb1 timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T21:00:00.656Z"}
+{"level":"error","message":"Batch batch_1752956853285_687bffb5c232e20719f5cfb1 failed - no summaries found within timeout period","timestamp":"2025-07-19T21:00:00.690Z"}
+{"level":"warn","message":"Batch batch_1752956972039_687c002c3df5e9e00660c39e timed out after 30 minutes. Expected 1, found 0 summaries (0.0%), 0 already have audio","timestamp":"2025-07-19T21:00:00.751Z"}
+{"level":"error","message":"Batch batch_1752956972039_687c002c3df5e9e00660c39e failed - no summaries found within timeout period","timestamp":"2025-07-19T21:00:00.782Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-19T21:00:00.814Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T21:00:01.302Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T21:00:01.331Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T21:00:01.332Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 1312ms ===","timestamp":"2025-07-19T21:00:01.332Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T21:05:00.029Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T21:05:00.029Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T21:05:00.058Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-19T21:05:00.093Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T21:05:00.593Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T21:05:00.625Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T21:05:00.626Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 597ms ===","timestamp":"2025-07-19T21:05:00.626Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T21:10:00.030Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T21:10:00.031Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T21:10:00.063Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-19T21:10:00.095Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T21:10:00.589Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T21:10:00.619Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T21:10:00.619Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 589ms ===","timestamp":"2025-07-19T21:10:00.620Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T21:15:00.029Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T21:15:00.030Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T21:15:00.058Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-19T21:15:00.089Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T21:15:00.598Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T21:15:00.628Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T21:15:00.628Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 600ms ===","timestamp":"2025-07-19T21:15:00.629Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T21:20:00.026Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T21:20:00.026Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T21:20:00.056Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-19T21:20:00.093Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T21:20:00.595Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T21:20:00.626Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T21:20:00.627Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 601ms ===","timestamp":"2025-07-19T21:20:00.627Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T21:25:00.033Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T21:25:00.034Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T21:25:00.066Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-19T21:25:00.101Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T21:25:00.642Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T21:25:00.686Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T21:25:00.686Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 653ms ===","timestamp":"2025-07-19T21:25:00.686Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-19T21:30:00.016Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-19T21:30:00.017Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-19T21:30:00.046Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-19T21:30:00.431Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-19T21:30:00.941Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-19T21:30:00.975Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-19T21:30:00.977Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 963ms ===","timestamp":"2025-07-19T21:30:00.980Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-20T07:25:07.681Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-20T07:25:07.737Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-20T07:25:07.737Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-20T07:25:07.740Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-20T07:25:11.546Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-20T07:25:11.557Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-20T07:25:11.561Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-20T07:25:11.561Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-20T07:25:11.562Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-20T07:25:11.562Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T12:30:00.000Z"},"timestamp":"2025-07-20T07:25:11.563Z"}
+{"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: Space metadata could not be loaded. ","stack":"Error: Space metadata could not be loaded. \n    at process_endpoint (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:229:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Client._resolve_config (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2494:47)\n    at async Client.init (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2417:5)\n    at async Function.connect (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2459:5)\n    at async SummaryService.sendSummaryToService (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\services\\summaryService.ts:176:28)\n    at async generateUserSummary (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\controller\\summarizerController.ts:158:24)","timestamp":"2025-07-20T07:25:28.616Z"}
+{"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: Space metadata could not be loaded. ","stack":"Error: Space metadata could not be loaded. \n    at process_endpoint (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:229:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Client._resolve_config (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2494:47)\n    at async Client.init (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2417:5)\n    at async Function.connect (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2459:5)\n    at async SummaryService.sendSummaryToService (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\services\\summaryService.ts:176:28)\n    at async generateUserSummary (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\controller\\summarizerController.ts:158:24)","timestamp":"2025-07-20T07:25:28.616Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-20T07:27:24.901Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-20T07:27:24.925Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-20T07:27:24.927Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-20T07:27:24.934Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-20T07:27:26.497Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-20T07:27:26.499Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-20T07:27:26.504Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-20T07:27:26.505Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-20T07:27:26.506Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-20T07:27:26.507Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T12:30:00.000Z"},"timestamp":"2025-07-20T07:27:26.508Z"}
+{"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: Space metadata could not be loaded. ","stack":"Error: Space metadata could not be loaded. \n    at process_endpoint (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:229:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Client._resolve_config (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2494:47)\n    at async Client.init (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2417:5)\n    at async Function.connect (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2459:5)\n    at async SummaryService.sendSummaryToService (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\services\\summaryService.ts:176:28)\n    at async generateUserSummary (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\controller\\summarizerController.ts:158:24)","timestamp":"2025-07-20T07:28:06.651Z"}
+{"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: Space metadata could not be loaded. ","stack":"Error: Space metadata could not be loaded. \n    at process_endpoint (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:229:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Client._resolve_config (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2494:47)\n    at async Client.init (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2417:5)\n    at async Function.connect (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\node_modules\\@gradio\\client\\dist\\index.js:2459:5)\n    at async SummaryService.sendSummaryToService (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\services\\summaryService.ts:176:28)\n    at async generateUserSummary (C:\\Users\\Jorl-work\\Desktop\\Projects\\Daily-Drip\\summaryService\\src\\controller\\summarizerController.ts:158:24)","timestamp":"2025-07-20T07:28:06.653Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T07:30:00.021Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T07:30:00.021Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T07:30:00.593Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T07:30:00.688Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T07:30:03.892Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T07:30:03.933Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T07:30:03.934Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 3914ms ===","timestamp":"2025-07-20T07:30:03.935Z"}
+{"broken":true,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: Connection errored out. ","queue":true,"stage":"error","time":"2025-07-20T07:32:48.219Z","timestamp":"2025-07-20T07:32:48.219Z","type":"status"}
+{"broken":true,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: Connection errored out. ","queue":true,"stage":"error","time":"2025-07-20T07:32:48.219Z","timestamp":"2025-07-20T07:32:48.220Z","type":"status"}
+{"level":"info","message":"Summary processed for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined. Result: Input: A derelict tenement building in Glasgow collapsed, causing nearby homes to be evacuated. The building at the corner of Kenmure Street and Albert Drive in Pollockshields had been lying derelict for about five years after being gutted by a fire during lockdown. The Scottish Fire and Rescue Service sent eight appliances to the scene, but there were no reports of injuries. The Twelfth of July is the biggest day in the Orange Order's marching calendar, with thousands of Orange Order members taking part in the annual marches to commemorate the anniversary of the Battle of the Boyne in 1690. The Twelfth of July is a significant event in the Orange Order's marching calendar, with thousands of Orange Order members participating in annual parades to commemorate the anniversary of the Battle of the Boyne in 1690. The event is also a celebration of Protestant traditions and Ulster-Scots heritage. This year's events are concentrated at 18 locations, with members traveling to converge with neighboring lodges at the nearest host venue. The Twelfth celebrations generations in the making, with many unionist communities observing Eleventh Night, a tradition observed by many. The UK has two definitions of drought: meteorological and hydrological. In meteorological terms, it refers to a sustained period of dry weather, while in hydrology, it is a lack of water resources. Droughts tend to occur following drier periods due to the lag between rain falling and it getting through river systems and into storage. Since the start of the latest hydrolographical year in October 2024, and up to the end of June 2025, rainfall has been approximately 20% below average, making it one of the driest periods since the infamous 1976 drought. The 2024/2025 hydrological year has been around 20% below average, with droughts and hosepipe bans being introduced. The last significant hosepipe ban in the UK was in the record-breaking summer of 2022. The UN has recorded nearly 800 people killed trying to access food in Gaza since late May, when Israel began easing a more than two-month blockade on deliveries. The Gaza Humanitarian Foundation (GHF) has been marred by chaotic scenes and frequent reports of Israeli forces firing on people waiting to collect rations. In 2024, the U.N. recorded over 60,000 migrants arriving in Yemen from the Horn of Africa, with the majority coming from Ethiopia. Fanta Ali Ahmed, a migrant from Tigray, Ethiopia, was trapped in a rickety prison with over 100 others after fleeing civil war in his home region. He was arrested and sent to a migrant detention center in northern Yemen, where he survived a bombing attack by American airstrikes targeting Yemen in a campaign against the Houthis. The TOI News Desk is a trusted source for staying informed and connected to the ever-evolving global landscape, ensuring readers are equipped with the latest developments that matter most. The TOI Business Desk is also a vigilant and dedicated team of journalists committed to delivering the latest and most relevant business news from around the world to readers of The Times of India. This week, a tech company sets a record, a big-name CEO steps down, and an internet icon celebrates a birthday. The news quiz discusses various topics, including the future value of investments, the impact of tariffs on global markets, and the Trump administration's ability to reach trade deals with countries. The administration has only announced two preliminary deals, with Britain and Vietnam, and its future is uncertain. The Trump administration has left double-digit tariffs in place, with the promise of more levies on foreign products on the way. President Trump's goal of opening global markets was initially believed to be achieved by imposing sweeping global tariffs in April. However, three months later, doubts are growing that his administration will ever strike the kind of trade deals that would open up markets. The administration has only announced two preliminary deals, with Britain and Vietnam, and the status of the Vietnam deal is now in question. The Trump administration has left double-digit tariffs in place, with the promise of more levies on foreign products on the way. Thank you for your patience while we verify access. If you are in Reader mode, please exit and log into your Times account or subscribe for all of The Times. Already a subscriber? Log in.Want all of the Times? Subscribe.","timestamp":"2025-07-20T07:34:29.870Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T07:35:00.028Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T07:35:00.029Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T07:35:00.067Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T07:35:04.300Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T07:35:05.908Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T07:35:06.440Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T07:35:06.440Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 6412ms ===","timestamp":"2025-07-20T07:35:06.440Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-20T07:36:17.470Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-20T07:36:17.486Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-20T07:36:17.487Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-20T07:36:17.489Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-20T07:36:26.122Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-20T07:36:26.123Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-20T07:36:26.126Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-20T07:36:26.127Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-20T07:36:26.127Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-20T07:36:26.128Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T12:30:00.000Z"},"timestamp":"2025-07-20T07:36:26.128Z"}
+{"broken":true,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: Connection errored out. ","queue":true,"stage":"error","time":"2025-07-20T07:37:55.093Z","timestamp":"2025-07-20T07:37:55.094Z","type":"status"}
+{"broken":true,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: Connection errored out. ","queue":true,"stage":"error","time":"2025-07-20T07:37:55.093Z","timestamp":"2025-07-20T07:37:55.096Z","type":"status"}
+{"level":"info","message":"Summary processed for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined. Result: Input: A derelict tenement building in Glasgow collapsed, causing nearby homes to be evacuated. The building at the corner of Kenmure Street and Albert Drive in Pollockshields had been lying derelict for about five years after being gutted by a fire during lockdown. The Scottish Fire and Rescue Service sent eight appliances to the scene, but there were no reports of injuries. The Twelfth of July is the biggest day in the Orange Order's marching calendar, with thousands of Orange Order members taking part in the annual marches to commemorate the anniversary of the Battle of the Boyne in 1690. The Twelfth of July is a significant event in the Orange Order's marching calendar, with thousands of Orange Order members participating in annual parades to commemorate the anniversary of the Battle of the Boyne in 1690. The event is also a celebration of Protestant traditions and Ulster-Scots heritage. This year's events are concentrated at 18 locations, with members traveling to converge with neighboring lodges at the nearest host venue. The Twelfth celebrations generations in the making, with many unionist communities observing Eleventh Night, a tradition observed by many. The UK has two definitions of drought: meteorological and hydrological. In meteorological terms, it refers to a sustained period of dry weather, while in hydrology, it is a lack of water resources. Droughts tend to occur following drier periods due to the lag between rain falling and it getting through river systems and into storage. Since the start of the latest hydrolographical year in October 2024, and up to the end of June 2025, rainfall has been approximately 20% below average, making it one of the driest periods since the infamous 1976 drought. The 2024/2025 hydrological year has been around 20% below average, with droughts and hosepipe bans being introduced. The last significant hosepipe ban in the UK was in the record-breaking summer of 2022. The UN has recorded nearly 800 people killed trying to access food in Gaza since late May, when Israel began easing a more than two-month blockade on deliveries. The Gaza Humanitarian Foundation (GHF) has been marred by chaotic scenes and frequent reports of Israeli forces firing on people waiting to collect rations. In 2024, the U.N. recorded over 60,000 migrants arriving in Yemen from the Horn of Africa, with the majority coming from Ethiopia. Fanta Ali Ahmed, a migrant from Tigray, Ethiopia, was trapped in a rickety prison with over 100 others after fleeing civil war in his home region. He was arrested and sent to a migrant detention center in northern Yemen, where he survived a bombing attack by American airstrikes targeting Yemen in a campaign against the Houthis. The TOI News Desk is a trusted source for staying informed and connected to the ever-evolving global landscape, ensuring readers are equipped with the latest developments that matter most. The TOI Business Desk is also a vigilant and dedicated team of journalists committed to delivering the latest and most relevant business news from around the world to readers of The Times of India. This week, a tech company sets a record, a big-name CEO steps down, and an internet icon celebrates a birthday. The news quiz discusses various topics, including the future value of investments, the impact of tariffs on global markets, and the Trump administration's ability to reach trade deals with countries. The administration has only announced two preliminary deals, with Britain and Vietnam, and its future is uncertain. The Trump administration has left double-digit tariffs in place, with the promise of more levies on foreign products on the way. President Trump's goal of opening global markets was initially believed to be achieved by imposing sweeping global tariffs in April. However, three months later, doubts are growing that his administration will ever strike the kind of trade deals that would open up markets. The administration has only announced two preliminary deals, with Britain and Vietnam, and the status of the Vietnam deal is now in question. The Trump administration has left double-digit tariffs in place, with the promise of more levies on foreign products on the way. Thank you for your patience while we verify access. If you are in Reader mode, please exit and log into your Times account or subscribe for all of The Times. Already a subscriber? Log in.Want all of the Times? Subscribe.","timestamp":"2025-07-20T07:39:14.999Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T07:40:00.026Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T07:40:00.026Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T07:40:00.065Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T07:40:01.062Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T07:40:04.007Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T07:40:04.046Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T07:40:04.046Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 4021ms ===","timestamp":"2025-07-20T07:40:04.047Z"}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:51:35","queue":true,"stage":"error","success":false,"time":"2025-07-20T07:40:47.784Z","timestamp":"2025-07-20T07:40:47.784Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:51:35","queue":true,"stage":"error","success":false,"time":"2025-07-20T07:40:47.784Z","timestamp":"2025-07-20T07:40:47.785Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:50:27","queue":true,"stage":"error","success":false,"time":"2025-07-20T07:41:13.556Z","timestamp":"2025-07-20T07:41:13.556Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:50:27","queue":true,"stage":"error","success":false,"time":"2025-07-20T07:41:13.556Z","timestamp":"2025-07-20T07:41:13.557Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T07:45:00.033Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T07:45:00.033Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T07:45:00.077Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T07:45:00.760Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T07:45:03.539Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T07:45:04.099Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T07:45:04.100Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 4068ms ===","timestamp":"2025-07-20T07:45:04.101Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T07:50:00.028Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T07:50:00.029Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T07:50:00.065Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T07:50:00.514Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T07:50:02.452Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T07:50:02.988Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T07:50:02.989Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 2961ms ===","timestamp":"2025-07-20T07:50:02.989Z"}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:40:57","queue":true,"stage":"error","success":false,"time":"2025-07-20T07:50:47.978Z","timestamp":"2025-07-20T07:50:47.979Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:40:57","queue":true,"stage":"error","success":false,"time":"2025-07-20T07:50:47.978Z","timestamp":"2025-07-20T07:50:47.980Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T07:55:00.019Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T07:55:00.020Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T07:55:22.797Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T07:55:23.207Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T07:55:25.093Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T07:55:25.377Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T07:55:25.378Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 25359ms ===","timestamp":"2025-07-20T07:55:25.378Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:00:00.033Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:00:00.034Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:00:00.576Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:00:02.091Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:00:04.535Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:00:04.572Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:00:04.572Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 4539ms ===","timestamp":"2025-07-20T08:00:04.572Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-20T08:03:55.835Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-20T08:03:55.850Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-20T08:03:55.851Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-20T08:03:55.853Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-20T08:03:57.915Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-20T08:03:57.918Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-20T08:03:57.925Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-20T08:03:57.926Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-20T08:03:57.927Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-20T08:03:57.927Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T12:30:00.000Z"},"timestamp":"2025-07-20T08:03:57.928Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:05:00.041Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:05:00.042Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:05:00.081Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:05:00.557Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:05:03.287Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:05:03.616Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:05:03.617Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 3576ms ===","timestamp":"2025-07-20T08:05:03.617Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:10:00.038Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:10:00.038Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:10:00.070Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:10:00.133Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:10:00.683Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:10:00.716Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:10:00.717Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 680ms ===","timestamp":"2025-07-20T08:10:00.718Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:15:00.047Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:15:00.048Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:15:19.689Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:15:19.729Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:15:20.297Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:15:20.328Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:15:20.329Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 20282ms ===","timestamp":"2025-07-20T08:15:20.329Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:20:00.021Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:20:00.023Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:20:19.647Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:20:19.683Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:20:20.231Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:20:20.262Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:20:20.263Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 20243ms ===","timestamp":"2025-07-20T08:20:20.264Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-20T08:21:16.835Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-20T08:21:16.851Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-20T08:21:16.852Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-20T08:21:16.855Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-20T08:21:17.406Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-20T08:21:17.406Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-20T08:21:17.409Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-20T08:21:17.409Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-20T08:21:17.410Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-20T08:21:17.410Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T12:30:00.000Z"},"timestamp":"2025-07-20T08:21:17.411Z"}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error processing summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:10:02","queue":true,"stage":"error","success":false,"time":"2025-07-20T08:21:35.533Z","timestamp":"2025-07-20T08:21:35.533Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"duration":10,"endpoint":"/run_summarization_gpu","fn_index":0,"level":"error","message":"Error generating summary for user 322d223f-71e2-4b57-aa91-b17b637ca0a6: You have exceeded your GPU quota (60s requested vs. 58s left). Try again in 23:10:02","queue":true,"stage":"error","success":false,"time":"2025-07-20T08:21:35.533Z","timestamp":"2025-07-20T08:21:35.534Z","title":"ZeroGPU quota exceeded","type":"status","visible":true}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:25:00.027Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:25:00.029Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:25:00.062Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:25:00.100Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:25:00.669Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:25:00.700Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:25:00.701Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 675ms ===","timestamp":"2025-07-20T08:25:00.702Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-20T08:26:33.027Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-20T08:26:33.052Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-20T08:26:33.053Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-20T08:26:33.058Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-20T08:26:33.640Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-20T08:26:33.643Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-20T08:26:33.655Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-20T08:26:33.656Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-20T08:26:33.657Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-20T08:26:33.659Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T12:30:00.000Z"},"timestamp":"2025-07-20T08:26:33.661Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:30:00.031Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:30:00.031Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:30:00.066Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:30:00.105Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:30:00.626Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:30:00.659Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:30:00.660Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 629ms ===","timestamp":"2025-07-20T08:30:00.660Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-20T08:32:07.463Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-20T08:32:07.478Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-20T08:32:07.479Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-20T08:32:07.481Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-20T08:32:08.081Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-20T08:32:08.082Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-20T08:32:08.086Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-20T08:32:08.087Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-20T08:32:08.087Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-20T08:32:08.088Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-20T12:30:00.000Z"},"timestamp":"2025-07-20T08:32:08.089Z"}
+{"level":"info","message":"Summary processed for user 322d223f-71e2-4b57-aa91-b17b637ca0a6 in batch undefined. Result: Input: Israeli forces killed at least 30 people in Gaza, including 10 who were waiting for aid, on Friday. The UN reported nearly 800 people killed trying to access food in Gaza since late May, when Israel began easing a two-month blockade on deliveries. The Gaza Humanitarian Foundation (GHF) operations have been marred by chaotic scenes and frequent reports of Israeli forces firing on people waiting to collect rations. A man named Fanta fled along one of the world's most dangerous smuggling routes, hoping to reach Saudi Arabia. He was arrested and sent to a migrant detention center in northern Yemen. In 2024, the U.N. recorded over 60,000 migrants arriving in Yemen from the Horn of Africa. When multiple 250-pound bombs hit the prison on April 28, tearing through the roof, Mr. Fanta survived with two broken legs and a broken arm. A derelict tenement building in Glasgow collapsed, causing nearby homes to be evacuated. The building has been lying derelict for about five years after being gutted by a fire during lockdown. The Scottish Fire and Rescue Service sent eight appliances to the scene, but there were no reports of injuries. The TOI News Desk is responsible for providing breaking news, in-depth analysis, and insightful reports on a wide range of topics. The Twelfth of July is the largest day in the Orange Order's marching calendar, with thousands of Orange Order members participating in annual parades across Northern Ireland to commemorate the anniversary of the Battle of the Boyne in 1690. The event is also a celebration of Protestant traditions and Ulster-Scots heritage. This year's events are held at 18 locations, with members traveling to converge with neighboring lodges at the nearest host venue. The Twelfth celebrations generations in the making, with hundreds of bonfires lit to mark Eleventh Night, a tradition observed by many unionist communities on the eve of the Twelfth. The UK has been experiencing a severe drought, with rainfall running approximately 20% below average since the start of the latest hydrological year in October 2024. The Environment Agency has stated that some areas are either in drought or a state of prolonged dry weather, and the National Drought Group will meet on Tuesday to discuss the latest situation. Factors such as population growth, urban expansion, changes in water usage over time, and rainfall totals are all contributing factors to the drought. The UK has experienced a dry spring and start to summer, with rainfall running approximately 20% below average since the start of the latest hydrological year in October 2024. This is one of the driest periods since the infamous 1976 drought. The last significant hosepipe ban in the UK was in the record-breaking summer of 2022, which affected nearly 20 million households. The TOI Business Desk is a vigilant and dedicated team of journalists committed to delivering the latest and most relevant business news from around the world to readers of The Times of India. This week, a tech company sets a record, a big-name CEO steps down, and an internet icon celebrates a birthday. Natasha Poonawalla makes a powerful throwback statement in an iconic Dior dress, and Malala Yousafzai's impactful quotes are used to motivate students. The Trump administration faces doubts about its ability to strike trade deals that would open up markets, as they have only announced two preliminary deals with Britain and Vietnam. The administration has left double-digit tariffs in place, with the promise of more levies on foreign products on the way. President Trump's goal of opening global markets was initially believed to be achieved by imposing sweeping global tariffs in April. However, three months later, doubts are growing that his administration will ever strike the kind of trade deals that would open up markets. The administration has only announced two preliminary deals, with Britain and Vietnam, and the status of the Vietnam deal is now in question. The Trump administration has left double-digit tariffs in place, with the promise of more levies on foreign products on the way. Thank you for your patience while we verify access. If you are in Reader mode, please exit and log into your Times account or subscribe for all of The Times. Already a subscriber? Log in.Want all of the Times? Subscribe.","timestamp":"2025-07-20T08:32:37.271Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:35:00.016Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:35:00.017Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:35:00.048Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:35:00.088Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:35:00.670Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:35:00.700Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:35:00.701Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 685ms ===","timestamp":"2025-07-20T08:35:00.701Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:40:00.016Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:40:00.017Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:40:00.049Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:40:00.081Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:40:00.611Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:40:00.644Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:40:00.645Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 630ms ===","timestamp":"2025-07-20T08:40:00.646Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:45:00.034Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:45:00.034Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:45:00.065Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:45:00.100Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:45:00.630Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:45:00.661Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:45:00.661Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 629ms ===","timestamp":"2025-07-20T08:45:00.662Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:50:00.017Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:50:00.017Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:50:00.051Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:50:00.088Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:50:00.596Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:50:00.628Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:50:00.628Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 612ms ===","timestamp":"2025-07-20T08:50:00.629Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T08:55:00.023Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T08:55:00.024Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T08:55:00.055Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T08:55:00.089Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T08:55:00.618Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T08:55:00.650Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T08:55:00.650Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 628ms ===","timestamp":"2025-07-20T08:55:00.651Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:00:00.025Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:00:00.026Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:00:00.057Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:00:00.088Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:00:00.594Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:00:00.624Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:00:00.624Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 599ms ===","timestamp":"2025-07-20T09:00:00.624Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:05:00.019Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:05:00.019Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:05:00.050Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:05:00.082Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:05:00.592Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:05:00.625Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:05:00.625Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 606ms ===","timestamp":"2025-07-20T09:05:00.625Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:10:00.018Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:10:00.018Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:10:00.061Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:10:00.097Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:10:00.750Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:10:00.794Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:10:00.795Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 778ms ===","timestamp":"2025-07-20T09:10:00.796Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:15:00.028Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:15:00.028Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:15:00.067Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:15:00.104Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:15:00.733Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:15:00.775Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:15:00.776Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 749ms ===","timestamp":"2025-07-20T09:15:00.777Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:20:00.035Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:20:00.036Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:20:00.074Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:20:00.111Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:20:01.057Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:20:01.096Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:20:01.097Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 1062ms ===","timestamp":"2025-07-20T09:20:01.097Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:25:00.028Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:25:00.028Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:25:00.062Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:25:00.097Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:25:00.693Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:25:00.729Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:25:00.730Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 703ms ===","timestamp":"2025-07-20T09:25:00.731Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:30:00.027Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:30:00.027Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:30:00.061Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:30:00.097Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:30:00.703Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:30:00.739Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:30:00.740Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 713ms ===","timestamp":"2025-07-20T09:30:00.740Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:35:00.018Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:35:00.019Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:35:00.052Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:35:00.087Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:35:00.760Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:35:00.795Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:35:00.796Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 779ms ===","timestamp":"2025-07-20T09:35:00.797Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:40:00.024Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:40:00.025Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:40:00.059Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:40:00.096Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:40:00.690Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:40:00.724Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:40:00.726Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 702ms ===","timestamp":"2025-07-20T09:40:00.726Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:45:00.029Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:45:00.031Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:45:00.066Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:45:00.102Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:45:00.681Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:45:00.716Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:45:00.717Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 688ms ===","timestamp":"2025-07-20T09:45:00.717Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:50:00.024Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:50:00.024Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:50:00.057Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:50:00.092Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:50:00.685Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:50:00.720Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:50:00.721Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 697ms ===","timestamp":"2025-07-20T09:50:00.721Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T09:55:00.020Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T09:55:00.020Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T09:55:00.054Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T09:55:00.090Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T09:55:00.690Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T09:55:00.727Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T09:55:00.727Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 707ms ===","timestamp":"2025-07-20T09:55:00.727Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:00:00.021Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:00:00.022Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:00:00.055Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:00:00.091Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:00:00.679Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:00:00.714Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:00:00.715Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 694ms ===","timestamp":"2025-07-20T10:00:00.715Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:05:00.024Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:05:00.025Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:05:00.061Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:05:00.094Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:05:00.612Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:05:00.645Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:05:00.647Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 624ms ===","timestamp":"2025-07-20T10:05:00.648Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:10:00.046Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:10:00.047Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:10:00.077Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:10:00.111Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:10:00.654Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:10:00.686Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:10:00.687Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 641ms ===","timestamp":"2025-07-20T10:10:00.687Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:15:00.018Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:15:00.019Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:15:00.048Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:15:00.081Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:15:00.593Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:15:00.624Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:15:00.625Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 607ms ===","timestamp":"2025-07-20T10:15:00.625Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:20:00.045Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:20:00.046Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:20:00.085Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:20:00.116Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:20:00.628Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:20:00.660Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:20:00.660Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 615ms ===","timestamp":"2025-07-20T10:20:00.660Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:25:00.028Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:25:00.029Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:25:00.060Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:25:00.092Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:25:00.611Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:25:00.640Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:25:00.641Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 613ms ===","timestamp":"2025-07-20T10:25:00.641Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:30:00.025Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:30:00.026Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:30:00.056Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:30:00.086Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:30:00.584Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:30:00.615Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:30:00.615Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 590ms ===","timestamp":"2025-07-20T10:30:00.615Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:35:00.035Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:35:00.035Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:35:00.065Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:35:00.099Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:35:00.631Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:35:00.662Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:35:00.662Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 628ms ===","timestamp":"2025-07-20T10:35:00.663Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:40:00.017Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:40:00.018Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:40:00.049Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:40:00.083Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:40:00.751Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:40:00.802Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:40:00.802Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 785ms ===","timestamp":"2025-07-20T10:40:00.802Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:45:00.028Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:45:00.028Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:45:00.090Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:45:00.130Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:45:01.023Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:45:01.054Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:45:01.055Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 1028ms ===","timestamp":"2025-07-20T10:45:01.056Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:50:00.016Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:50:00.017Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:50:00.046Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:50:00.078Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:50:00.603Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:50:00.635Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:50:00.636Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 621ms ===","timestamp":"2025-07-20T10:50:00.637Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T10:55:00.029Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T10:55:00.029Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T10:55:00.059Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T10:55:00.091Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T10:55:00.645Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T10:55:00.675Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T10:55:00.676Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 647ms ===","timestamp":"2025-07-20T10:55:00.676Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:00:00.032Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:00:00.032Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:00:00.063Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:00:00.096Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:00:00.600Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:00:00.631Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:00:00.632Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 601ms ===","timestamp":"2025-07-20T11:00:00.633Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:05:00.024Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:05:00.024Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:05:00.054Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:05:00.090Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:05:00.609Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:05:00.640Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:05:00.641Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 618ms ===","timestamp":"2025-07-20T11:05:00.642Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:10:00.018Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:10:00.018Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:10:00.048Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:10:00.080Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:10:00.601Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:10:00.634Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:10:00.635Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 617ms ===","timestamp":"2025-07-20T11:10:00.635Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:15:00.046Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:15:00.046Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:15:00.076Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:15:00.111Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:15:00.648Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:15:00.680Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:15:00.680Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 635ms ===","timestamp":"2025-07-20T11:15:00.681Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:20:00.021Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:20:00.021Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:20:00.063Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:20:00.106Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:20:00.832Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:20:00.873Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:20:00.874Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 853ms ===","timestamp":"2025-07-20T11:20:00.874Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:25:00.021Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:25:00.021Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:25:00.058Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:25:00.096Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:25:00.747Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:25:00.787Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:25:00.787Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 766ms ===","timestamp":"2025-07-20T11:25:00.787Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:30:00.037Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:30:00.038Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:30:00.079Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:30:00.123Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:30:00.791Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:30:00.831Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:30:00.832Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 795ms ===","timestamp":"2025-07-20T11:30:00.832Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:35:00.016Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:35:00.016Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:35:00.055Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:35:00.095Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:35:00.738Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:35:00.775Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:35:00.776Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 760ms ===","timestamp":"2025-07-20T11:35:00.776Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:40:00.022Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:40:00.023Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:40:00.066Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:40:00.110Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:40:00.840Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:40:00.885Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:40:00.885Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 863ms ===","timestamp":"2025-07-20T11:40:00.885Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:45:00.024Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:45:00.025Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:45:00.066Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:45:00.110Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:45:00.838Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:45:00.881Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:45:00.882Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 858ms ===","timestamp":"2025-07-20T11:45:00.882Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:50:00.025Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:50:00.025Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:50:00.067Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:50:00.112Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:50:00.928Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:50:00.972Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:50:00.973Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 948ms ===","timestamp":"2025-07-20T11:50:00.973Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-20T11:55:00.017Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-20T11:55:00.017Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-20T11:55:00.054Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-20T11:55:00.095Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-20T11:55:00.753Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-20T11:55:00.791Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-20T11:55:00.791Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 774ms ===","timestamp":"2025-07-20T11:55:00.791Z"}
