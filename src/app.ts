@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(morganMiddleware);
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/noais/health', (req, res) => {
   res.status(200).json({
     status: 'healthy',
     timestamp: new Date().toISOString(),
@@ -29,8 +29,8 @@ app.get('/health', (req, res) => {
 });
 
 // API routes
-app.use('/api', routes);
-app.use('/webhooks', webhooks);
+app.use('/noais/api', routes);
+app.use('/noais/webhooks', webhooks);
 
 // Error handling middleware
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
