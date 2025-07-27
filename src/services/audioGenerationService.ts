@@ -2,6 +2,7 @@ import axios from '../utils/axiosIntercepter';
 import { logger } from '../utils/logger';
 import AiSummaries from '../models/aiSummarries';
 import BatchTracker from '../models/batchTracker';
+import { Client } from '@gradio/client';
 
 export class AudioGenerationService {
 
@@ -64,7 +65,7 @@ export class AudioGenerationService {
     /**
      * Send individual summary for audio generation (fire-and-forget)
      */
-    private sendIndividualSummaryForAudio(summary: any, batchId: string): void {
+    public async sendIndividualSummaryForAudio(summary: any, batchId: string): Promise<void> {
         // Prepare individual summary data
         const summaryData = {
             summaryId: summary._id,
@@ -76,17 +77,28 @@ export class AudioGenerationService {
             timestamp: new Date()
         };
 
-        // Fire-and-forget request
-        axios.post('/generate-audio', {
-            batchId,
-            summaryId: summary._id, // Include summaryId at top level for easy access
-            data: summaryData
-        }).then(() => {
-            logger.info(`Audio generation request sent for summary ${summary._id}, user ${summary.userId} in batch ${batchId}`);
-        }).catch((error) => {
-            logger.error(`Error sending audio generation request for summary ${summary._id} in batch ${batchId}:`, error.message);
-            // Note: Individual failures don't stop the process - webhooks will handle batch completion logic
+        const client = await Client.connect("joeljose555/aiScripts", {
+            hf_token: process.env.HF_TOKEN as `hf_${string}`
         });
+        const result = await client.predict("/run_tts_gpu", {
+            text: summary.summary,
+            user_id: summary.userId,
+            batch_id: summary.batchId,
+            summary_id: summary._id.toString(),
+            max_length: 700, // Adjust this value based on your needs
+        });
+        logger.info(`Audio generation request sent for summary ${summary._id}, user ${summary.userId} in batch ${batchId}`);
+        // // Fire-and-forget request
+        // axios.post('/generate-audio', {
+        //     batchId,
+        //     summaryId: summary._id, // Include summaryId at top level for easy access
+        //     data: summaryData
+        // }).then(() => {
+        //     logger.info(`Audio generation request sent for summary ${summary._id}, user ${summary.userId} in batch ${batchId}`);
+        // }).catch((error) => {
+        //     logger.error(`Error sending audio generation request for summary ${summary._id} in batch ${batchId}:`, error.message);
+        //     // Note: Individual failures don't stop the process - webhooks will handle batch completion logic
+        // });
     }
 
     /**

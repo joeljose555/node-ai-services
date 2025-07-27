@@ -8,6 +8,7 @@ import NewsSummaries from '../models/newsSummaries.js';
 import BatchTracker from '../models/batchTracker.js';
 import mongoose from 'mongoose';
 import fs from 'fs';
+import aiSummarries from '../models/aiSummarries.js';
 
 interface ArticleSummary {
     userId: string;
@@ -180,6 +181,8 @@ export class SummaryService {
             // Call the summarise_interface with the summary text
             const result = await client.predict("/run_summarization_gpu", {
                 text: summary.summary,
+                user_id: summary.userId,
+                batch_id: summary.batchId,
                 max_length: 700, // Adjust this value based on your needs
             });
 
@@ -290,7 +293,15 @@ export class SummaryService {
         }
     }
 
-
+    async getSummaryById(summaryId: string): Promise<any | null> {
+        try {
+            const summary = await aiSummarries.findOne({_id: summaryId});
+            return summary;
+        } catch (error) {
+            logger.error(`Error getting summary by id ${summaryId}:`, error);
+            throw error;
+        }
+    }
 }
 
 // Export singleton instance

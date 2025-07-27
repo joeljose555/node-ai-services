@@ -3,6 +3,7 @@ import { summaryService } from '../services/summaryService.js';
 import { schedulerService } from '../schedulers/scheduler.js';
 import { logger } from '../utils/logger.js';
 import fs from 'fs';
+import { audioGenerationService } from '../services/audioGenerationService.js';
 
 export class SummarizerController {
     
@@ -137,7 +138,7 @@ export class SummarizerController {
     async generateUserSummary(req: Request, res: Response): Promise<void> {
         try {
             const { userId } = req.params;
-            
+            const { batchId } = req.body;
             if (!userId) {
                 res.status(400).json({
                     success: false,
@@ -146,7 +147,7 @@ export class SummarizerController {
                 return;
             }
             
-            const summary = await summaryService.generateSummaryForUser(userId);
+            const summary = await summaryService.generateSummaryForUser(userId,batchId);
             fs.writeFileSync('summary.json', JSON.stringify(summary, null, 2));
             if (!summary) {
                 res.status(404).json({
@@ -168,6 +169,27 @@ export class SummarizerController {
             res.status(500).json({
                 success: false,
                 message: 'Failed to generate user summary',
+                error: error instanceof Error ? error.message : 'Unknown error'
+            });
+        }
+    }
+
+    async generateTTS(req: Request, res: Response): Promise<void> {
+        try {
+            const { summaryId } = req.body;
+            const summary = await summaryService.getSummaryById(summaryId);
+            console.log(summary);
+            let data = await audioGenerationService.sendIndividualSummaryForAudio(summary, summary.batchId);
+            console.log(data);
+            res.status(200).json({
+                success: true,
+                data: data
+            });
+        } catch (error) {
+            logger.error(`Error generating TTS for summary ${req.body.summaryId}:`, error);
+            res.status(500).json({
+                success: false,
+                message: 'Failed to generate TTS',
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
         }
