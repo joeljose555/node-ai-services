@@ -2064,3 +2064,22 @@
 {"level":"info","message":"Batch statistics:","timestamp":"2025-07-27T11:40:00.779Z"}
 {"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-27T11:40:00.780Z"}
 {"level":"info","message":"=== Completed batch maintenance task in 738ms ===","timestamp":"2025-07-27T11:40:00.781Z"}
+{"level":"info","message":"=== Starting batch maintenance task ===","timestamp":"2025-07-27T11:45:00.039Z"}
+{"level":"info","message":"Starting batch timeout maintenance task","timestamp":"2025-07-27T11:45:00.040Z"}
+{"level":"info","message":"Found 0 timed-out batches to process","timestamp":"2025-07-27T11:45:00.079Z"}
+{"level":"info","message":"Checking 16 failed batches for orphaned summaries","timestamp":"2025-07-27T11:45:00.124Z"}
+{"level":"info","message":"Checking 0 pending batches for partial completion","timestamp":"2025-07-27T11:45:00.748Z"}
+{"level":"info","message":"Batch statistics:","timestamp":"2025-07-27T11:45:00.786Z"}
+{"level":"info","message":"Completed batch timeout maintenance task","timestamp":"2025-07-27T11:45:00.787Z"}
+{"level":"info","message":"=== Completed batch maintenance task in 749ms ===","timestamp":"2025-07-27T11:45:00.788Z"}
+{"level":"info","message":"Setting up summary generation scheduler with cron pattern: 0 */6 * * *","timestamp":"2025-07-27T11:46:09.359Z"}
+{"level":"info","message":"Summary generation scheduler configured successfully","timestamp":"2025-07-27T11:46:09.385Z"}
+{"level":"info","message":"Setting up batch maintenance scheduler with cron pattern: */5 * * * *","timestamp":"2025-07-27T11:46:09.385Z"}
+{"level":"info","message":"Batch maintenance scheduler configured successfully","timestamp":"2025-07-27T11:46:09.391Z"}
+{"level":"info","message":"🗄️  MongoDB connected successfully","timestamp":"2025-07-27T11:46:10.134Z"}
+{"level":"info","message":"Summary generation scheduler initialized","timestamp":"2025-07-27T11:46:10.136Z"}
+{"level":"info","message":"🚀 Summary Service running on port 3003","timestamp":"2025-07-27T11:46:10.146Z"}
+{"level":"info","message":"📱 Health check: http://localhost:3003/health","timestamp":"2025-07-27T11:46:10.147Z"}
+{"level":"info","message":"📊 API base: http://localhost:3003/api","timestamp":"2025-07-27T11:46:10.148Z"}
+{"level":"info","message":"Environment: local","timestamp":"2025-07-27T11:46:10.150Z"}
+{"batchMaintenance":{"cronPattern":"*/5 * * * *","isRunning":false,"isScheduled":false},"level":"info","message":"📅 Scheduler status:","summaryTask":{"cronPattern":"0 */6 * * *","isRunning":false,"isScheduled":false,"nextRun":"2025-07-27T12:30:00.000Z"},"timestamp":"2025-07-27T11:46:10.152Z"}
