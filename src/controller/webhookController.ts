@@ -4,6 +4,7 @@ import { logger } from '../utils/logger';
 
 export class WebhookController {
     async handleSummaryWebhook(req: Request, res: Response) {
+        console.log("--------------------------------handleSummaryWebhook--------------------------------");
         try {
             const { summary, userId, summaryType, summaryTitle, batchId } = req.body;
             const newSummary = await webhookServices.saveSummary(summary, userId, summaryType, summaryTitle, batchId);

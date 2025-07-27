@@ -4,3 +4,4 @@ dist
 package-lock.json
 summary.json
 logs/
+.DS_Store
